@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎃 Spooky Invite 🎃</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="jams" controls loop>
+        <source src="static/sound/jams.mp3" preload="auto" type="audio/mpeg">
+    </audio>
+
+    <div id="playJamsButton" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+        <button style="margin-bottom: 10px" onclick="playJams()">Start spook</button>
+        <div style="color: white">
+            👻 Volume up! 👻
+        </div>
+    </div>
+
+    <div id="countdownToJams" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none;">
+    </div>
+
+    <section id="main" style="display: none">
+        <div id="content">
+            <div class="dootSkeletons"></div>
+
+            <div id="invite">
+                <div id="dancingSkeletons">
+                    <img src="static/img/dancing-pumpkin-skeleton.gif" />
+                    <img src="static/img/dancing-pumpkin-skeleton.gif" />
+                </div>
+                <div id="inviteHolder">
+                    <h1>You Are Invited</h1>
+                    <h2>To a spooktacular event!</h2>
+                    <hr />
+                    <h3>When?</h3>
+                    <h4>Friday, October 27<sup>th</sup>, 2023 @ 7:00pm</h4>
+                    <hr />
+                    <h3>Where?</h3>
+                    <h4>123 Abc Drive</h4>
+                    <h4>12345 Milwaukke, WI</h4>
+                </div>
+                <div id="dancingSkeletons">
+                    <img src="static/img/dancing-pumpkin-skeleton.gif" />
+                    <img src="static/img/dancing-pumpkin-skeleton.gif" />
+                </div>
+            </div>
+
+            <div class="dootSkeletons"></div>
+        </div>
+    </section>
+    
+    <script src="index.js"></script>
+</body>
+</html>
