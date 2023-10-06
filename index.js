@@ -1,8 +1,6 @@
 function main() {
-  //adjustDootSkeletonSize()
-  /*addEventListener("resize", (_) => {
-    adjustDootSkeletonSize()
-  })*/
+  addEventListener("resize", appHeight);
+  appHeight();
 }
 
 async function playJams() {
@@ -14,7 +12,7 @@ async function playJams() {
 
   // 7.5s
   const countdownToJams = document.getElementById("countdownToJams");
-  countdownToJams.style.display = "";
+  countdownToJams.style.display = "inline";
   
   let timeLeft = 7
   countdownToJams.innerHTML = `<h1>${timeLeft+1}</h1><div style="color: white">👻 Volume up! 👻</div>`;
@@ -34,7 +32,7 @@ async function playJams() {
   await sleep(7500);
 
   const mainContent = document.getElementById("main");
-  mainContent.style.display = "";
+  mainContent.style.display = "inline";
 
   const dootSkeletons = document.getElementsByClassName("dootSkeletons");
   for (const dootSkeleton of dootSkeletons) {
@@ -42,12 +40,9 @@ async function playJams() {
   }
 }
 
-function adjustDootSkeletonSize() {
-  const dootSkeletons = document.getElementsByClassName("dootSkeletons");
-  for (const dootSkeleton of dootSkeletons) {
-    const newWidth = dootSkeleton.getBoundingClientRect().width
-    dootSkeleton.style.backgroundSize = `${newWidth}px ${newWidth}px`
-  }
+const appHeight = () => {
+  const doc = document.documentElement
+  doc.style.setProperty('--app-height', `${window.innerHeight}px`)
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
