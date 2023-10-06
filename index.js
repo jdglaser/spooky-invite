@@ -32,7 +32,7 @@ async function playJams() {
   await sleep(7500);
 
   const mainContent = document.getElementById("main");
-  mainContent.style.display = "flex";
+  mainContent.style.visibility = "visible";
 
   const dootSkeletons = document.getElementsByClassName("dootSkeletons");
   for (const dootSkeleton of dootSkeletons) {
